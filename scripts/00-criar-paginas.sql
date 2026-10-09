@@ -1,0 +1,13 @@
+-- ============================================================
+-- SITE INSTITUCIONAL - MÃE DA MARIA
+-- 00 - CRIAÇÃO DAS PÁGINAS (vazias; conteúdo preenchido depois)
+-- ============================================================
+
+INSERT INTO wp_posts (post_author, post_date, post_date_gmt, post_content, post_title, post_excerpt, post_status, comment_status, ping_status, post_name, to_ping, pinged, post_modified, post_modified_gmt, post_content_filtered, post_parent, guid, menu_order, post_type, post_mime_type, comment_count) VALUES
+(1, DATE_SUB(NOW(), INTERVAL 1 DAY), DATE_SUB(UTC_TIMESTAMP(), INTERVAL 1 DAY), '', 'Home', '', 'publish', 'closed', 'closed', 'home', '', '', DATE_SUB(NOW(), INTERVAL 1 DAY), DATE_SUB(UTC_TIMESTAMP(), INTERVAL 1 DAY), '', 0, 'http://localhost:8082/home/', 0, 'page', '', 0),
+(1, DATE_SUB(NOW(), INTERVAL 1 DAY), DATE_SUB(UTC_TIMESTAMP(), INTERVAL 1 DAY), '', 'Sobre Nós', '', 'publish', 'closed', 'closed', 'sobre-nos', '', '', DATE_SUB(NOW(), INTERVAL 1 DAY), DATE_SUB(UTC_TIMESTAMP(), INTERVAL 1 DAY), '', 0, 'http://localhost:8082/sobre-nos/', 0, 'page', '', 0),
+(1, DATE_SUB(NOW(), INTERVAL 1 DAY), DATE_SUB(UTC_TIMESTAMP(), INTERVAL 1 DAY), '', 'Nossos Produtos', '', 'publish', 'closed', 'closed', 'nossos-produtos', '', '', DATE_SUB(NOW(), INTERVAL 1 DAY), DATE_SUB(UTC_TIMESTAMP(), INTERVAL 1 DAY), '', 0, 'http://localhost:8082/nossos-produtos/', 0, 'page', '', 0),
+(1, DATE_SUB(NOW(), INTERVAL 1 DAY), DATE_SUB(UTC_TIMESTAMP(), INTERVAL 1 DAY), '', 'Equipe', '', 'publish', 'closed', 'closed', 'equipe', '', '', DATE_SUB(NOW(), INTERVAL 1 DAY), DATE_SUB(UTC_TIMESTAMP(), INTERVAL 1 DAY), '', 0, 'http://localhost:8082/equipe/', 0, 'page', '', 0),
+(1, DATE_SUB(NOW(), INTERVAL 1 DAY), DATE_SUB(UTC_TIMESTAMP(), INTERVAL 1 DAY), '', 'Nossos Serviços', '', 'publish', 'closed', 'closed', 'nossos-servicos', '', '', DATE_SUB(NOW(), INTERVAL 1 DAY), DATE_SUB(UTC_TIMESTAMP(), INTERVAL 1 DAY), '', 0, 'http://localhost:8082/nossos-servicos/', 0, 'page', '', 0),
+(1, DATE_SUB(NOW(), INTERVAL 1 DAY), DATE_SUB(UTC_TIMESTAMP(), INTERVAL 1 DAY), '', 'Produção', '', 'publish', 'closed', 'closed', 'producao', '', '', DATE_SUB(NOW(), INTERVAL 1 DAY), DATE_SUB(UTC_TIMESTAMP(), INTERVAL 1 DAY), '', 0, 'http://localhost:8082/producao/', 0, 'page', '', 0),
+(1, DATE_SUB(NOW(), INTERVAL 1 DAY), DATE_SUB(UTC_TIMESTAMP(), INTERVAL 1 DAY), '', 'Contato', '', 'publish', 'closed', 'closed', 'contato', '', '', DATE_SUB(NOW(), INTERVAL 1 DAY), DATE_SUB(UTC_TIMESTAMP(), INTERVAL 1 DAY), '', 0, 'http://localhost:8082/contato/', 0, 'page', '', 0);

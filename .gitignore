@@ -1,0 +1,37 @@
+# ============================================================
+# Site Institucional (WordPress + Docker) - .gitignore
+# ============================================================
+
+# --- Credenciais / configuração local ---
+# wp-config.php contém as credenciais da base de dados e é
+# regenerado pela imagem oficial de WordPress a partir das
+# variáveis de ambiente (WORDPRESS_DB_*). Subimos apenas o
+# modelo wp-config-docker.php.
+wordpress-files/wp-config.php
+.env
+*.env.local
+
+# --- Volume de dados MySQL (regenerável com scripts/*.sql) ---
+db_data/
+
+# --- .htaccess (específico do ambiente; o WP já o regenera) ---
+wordpress-files/.htaccess
+
+# --- Arquivos de diagnóstico / lixo local (raíz do projeto) ---
+/status.txt
+/check*.txt
+/*.log
+
+# --- Sistema operativo ---
+Thumbs.db
+.DS_Store
+desktop.ini
+
+# --- Editor / IDE ---
+.vscode/
+.idea/
+*.swp
+
+# NOTA: NO ignoramos scripts/*.sql nem wp-content/uploads/.
+# Os scripts são a "receita" versionada do conteúdo (páginas, menu,
+# produtos, logo) e as imagens de uploads são as que usa o tema.

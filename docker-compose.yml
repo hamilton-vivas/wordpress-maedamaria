@@ -1,0 +1,47 @@
+version: '3.8'
+
+services:
+  db:
+    image: mysql:8.0
+    container_name: sitio_db
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root_password
+      MYSQL_DATABASE: site_institucional
+      MYSQL_USER: sitio_user
+      MYSQL_PASSWORD: sitio_password
+    volumes:
+      - db_data:/var/lib/mysql
+
+  wordpress:
+    build: .
+    container_name: sitio_web
+    restart: always
+    ports:
+      - "8082:8082"
+    environment:
+      WORDPRESS_DB_HOST: db
+      WORDPRESS_DB_USER: sitio_user
+      WORDPRESS_DB_PASSWORD: sitio_password
+      WORDPRESS_DB_NAME: site_institucional
+      # Ambiente local: habilita Application Passwords (autenticação REST por
+      # Basic Auth) e recursos de desenvolvimento do WordPress.
+      WP_ENVIRONMENT_TYPE: local
+    volumes:
+      - ./wordpress-files:/var/www/html
+    depends_on:
+      - db
+
+  phpmyadmin:
+    image: phpmyadmin:latest
+    container_name: sitio_phpmyadmin
+    restart: always
+    ports:
+      - "8083:80"
+    environment:
+      PMA_HOST: db
+    depends_on:
+      - db
+
+volumes:
+  db_data:
